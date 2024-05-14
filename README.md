@@ -4,14 +4,13 @@
 
 I developed a Node.js server using Express.js and MongoDB, structured in the MVC architecture with robust error handling. The server facilitates CRUD operations for both users and products. Users can register, update, and delete their profiles, as well as add products to their carts. Admins can manage site-wide products, including uploading images to ImgBB. All data is stored in MongoDB for efficient retrieval and management.
 
+---
+
 ## video
-
-
 
 https://github.com/Vibhav00/BookApnahBackend/assets/101458238/876bce0a-7724-430a-bb06-75ddff40b8ef
 
-
-
+---
 
 ## Initialization of the Database
 
@@ -25,6 +24,8 @@ https://github.com/Vibhav00/BookApnahBackend/assets/101458238/876bce0a-7724-430a
 ```
 
 - this will return a list of books added to the database
+
+---
 
 ## adding the books as admin ➕🍁
 
@@ -72,6 +73,8 @@ https://github.com/Vibhav00/BookApnahBackend/assets/101458238/876bce0a-7724-430a
 }
 ```
 
+---
+
 ## Rest urls with output are as follows :-
 
 ### user registerations 🧾
@@ -114,6 +117,8 @@ http://localhost:5000/users/register
 }
 ```
 
+---
+
 ### check if user is logged in 🚪
 
 - url
@@ -131,7 +136,7 @@ http://localhost:5000/users/check
 }
 ```
 
-### user login
+### user login 🔒🔑
 
 - url
 
@@ -168,6 +173,8 @@ http://localhost:5000/users/login
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDE4MjRhZjQ0MmQzOTllMGRkYzkwNiIsImlhdCI6MTcxNTY2MzYxNSwiZXhwIjoxNzE1OTIyODE1fQ.Z8obo8_Ibd2aJ8cvAcX8q1BSf7jAt5FQ6RvyUa4iNRg"
 }
 ```
+
+---
 
 ### get all books 📚
 
@@ -236,3 +243,5 @@ http://127.0.0.1:5000/books
   "filteredBooksCount": 10
 }
 ```
+
+---
