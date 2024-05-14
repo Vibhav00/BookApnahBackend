@@ -11,7 +11,7 @@ const {
   updateProfile,
   getUserDetails,
 } = require('../controllers/userController')
-const { isAuthenticatedUser } = require('../middlewares/auth')
+const { isAuthenticatedUser, authorizeRoles } = require('../middlewares/auth')
 
 const router = express.Router()
 

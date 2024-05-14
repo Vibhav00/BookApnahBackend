@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const bookSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, 'Please Enter product Name'],
+    required: [true, 'Please Enter Book Name'],
     trim: true,
   },
   isbn: {
@@ -19,7 +19,7 @@ const bookSchema = new mongoose.Schema({
   },
   format: {
     type: String,
-    required: [true, 'Please Enter author name'],
+    required: [true, 'Please Enter format '],
     trim: true,
   },
   description: {
@@ -34,11 +34,11 @@ const bookSchema = new mongoose.Schema({
   old_price: {
     type: Number,
     required: [true, 'Please Enter old Price'],
-    maxLength: [8, 'Price cannot exceed 8 characters'],
+    maxLength: [8, 'Old Price cannot exceed 8 characters'],
   },
   discount: {
     type: Number,
-    maxLength: [8, 'Price cannot exceed 8 characters'],
+    maxLength: [8, 'Discount cannot exceed 8 characters'],
   },
   ratings: {
     type: Number,
