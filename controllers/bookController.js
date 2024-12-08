@@ -93,7 +93,8 @@ exports.updateBook = catchAsyncErrors(async (req, res, next) => {
 
 // single book details
 exports.getBookDetails = catchAsyncErrors(async (req, res, next) => {
-  const book = await Book.findById(req.body.id)
+  console.log(req.params.id)
+  const book = await Book.findById(req.params.id)
 
   res.status(200).json({
     success: true,

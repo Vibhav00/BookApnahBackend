@@ -28,7 +28,6 @@ app.use(cookieParser())
 /** adding routes **/
 app.use('/books', bookRoute)
 app.use('/users', userRoute)
-
 // Middleware for Errors
 app.use(ErrorHandler)
 module.exports = app

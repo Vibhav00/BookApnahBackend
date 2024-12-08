@@ -14,19 +14,20 @@ class ApiFeatures {
         }
       : {}
 
-    const newBook = this.queryStr.newbook ? { new_book: true } : {}
-    const topSellings = this.queryStr.topsellings ? { top_sellings: true } : {}
-    const onSale = this.queryStr.onsale ? { on_sale: true } : {}
-    const recentComming = this.queryStr.recentcomming
-      ? { recent_comming: true }
-      : {}
-    console.log({
-      ...keyword,
-      ...newBook,
-      ...topSellings,
-      ...onSale,
-      ...recentComming,
-    })
+    console.log(this.queryStr.newbook)
+    const newBook = this.queryStr.newbook == 'true' ? { new_book: true } : {}
+    const topSellings =
+      this.queryStr.topsellings == 'true' ? { top_sellings: true } : {}
+    const onSale = this.queryStr.onsale == 'true' ? { on_sale: true } : {}
+    const recentComming =
+      this.queryStr.recentcomming == 'true' ? { recent_comming: true } : {}
+     console.log({
+       ...keyword,
+       ...newBook,
+       ...topSellings,
+       ...onSale,
+       ...recentComming,
+     })
     this.query = this.query.find({
       ...keyword,
       ...newBook,

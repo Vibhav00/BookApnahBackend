@@ -13,9 +13,9 @@ const router = express.Router()
 router.route('/').get(getAllBooks)
 router.route('/init').get(initializeBooks)
 router
-  .route('/book')
+  .route('/book/:id')
   .post(isAuthenticatedUser, authorizeRoles('admin'), addBook)
-  .get(isAuthenticatedUser, authorizeRoles('admin'), getBookDetails)
+  .get(getBookDetails)
   .put(isAuthenticatedUser, authorizeRoles('admin'), updateBook)
   .delete(isAuthenticatedUser, authorizeRoles('admin'), deleteBook)
 

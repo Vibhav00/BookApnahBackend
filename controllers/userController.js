@@ -105,7 +105,8 @@ exports.getAllCart = catchAsyncErrors(async (req, res, next) => {
 
 //  delete a cart item //
 exports.deleteCartItem = catchAsyncErrors(async (req, res, next) => {
-  const name = req.body.name
+  // const name = req.body.name
+  let { name } = req.query
   const user = await User.findById(req.user.id)
 
   console.log(name)
